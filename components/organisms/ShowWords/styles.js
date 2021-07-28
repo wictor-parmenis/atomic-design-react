@@ -9,6 +9,18 @@ export const Container = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 2em;
+      margin: 2em;
+  }
+
+  hr{
+      margin: 2em;
+  }
+
+  .select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
   }
 `;

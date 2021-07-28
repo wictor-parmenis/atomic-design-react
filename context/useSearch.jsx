@@ -6,9 +6,10 @@ const ContextWords = createContext({})
 const ContextWordsProvider = ({children}) => {
 
     const [word, setWords] = useState('nothing')
+    const [language, setLanguage] = useState("en_US")
 
     return (
-        <ContextWords.Provider value={{word, setWords}}>
+        <ContextWords.Provider value={{word, setWords, language, setLanguage}}>
             {children}
         </ContextWords.Provider>
     )

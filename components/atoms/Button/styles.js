@@ -10,4 +10,13 @@ export const Container = styled.button`
     border: none;
     border-radius: 4px;
     color: black;
+    transition-duration: .3s;
+    cursor: pointer;
+
+    &:hover{
+        color: ${({bg}) => bg} !important;
+        background-color: ${({color}) => color};
+        border: 1px solid ${({bg}) => bg};
+
+    }
 `;
