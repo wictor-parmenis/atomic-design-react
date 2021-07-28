@@ -20,6 +20,7 @@ function ShowWords() {
     }
 
     const searchWord = () => {
+        // query: https://dictionaryapi.dev/
         console.log('entrei')
         axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`)
             .then(res => {
