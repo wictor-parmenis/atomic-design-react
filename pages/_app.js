@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import ContextWordsProvider from "../context/useSearch"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -17,10 +18,12 @@ const theme = {
 export default function App({ Component, pageProps }) {
   return (
     <>
+    <ContextWordsProvider>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
+      </ContextWordsProvider>
     </>
   )
 }

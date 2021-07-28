@@ -7,4 +7,6 @@ export const Container = styled.input`
     color: ${({color}) => color};
     background-color: ${({bg}) => bg};
     border-radius: 4px;
+    border: none;
+    padding-left: 0.4em;
 `;

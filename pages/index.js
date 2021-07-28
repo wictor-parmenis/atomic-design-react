@@ -1,5 +1,4 @@
-import Outdoor from "../components/atoms/Outdoor"
-import InputLabel from "../components/molecules/inputLabel"
+
 import ShowWords from "../components/organisms/ShowWords"
 import TemplateMain from "../components/templates/templateMain"
 

@@ -6,6 +6,8 @@ export const Container = styled.button`
     width: 12em;
     height: 3em;
     background-color: ${({bg}) => bg};
-    color: ${({color}) => color};
+    color: ${({color}) => color} !important;
     border: none;
+    border-radius: 4px;
+    color: black;
 `;

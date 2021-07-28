@@ -8,4 +8,5 @@ export const Container = styled.div`
     padding: 1em;
     border-radius: 8px;
     font-size: 1.2em;
+    margin: 2em;
 `;
