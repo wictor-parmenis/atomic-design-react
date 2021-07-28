@@ -1,9 +1,7 @@
 # Search a word in this dictionary :D
 - API used: 
  https://api.dictionaryapi.dev/
- - Stack:
-
-Next.js, React.js, Styled Components and Axios.
+ - Stack: Next.js, React.js, Styled Components and Axios.
 
 # Example app with styled-components
 
