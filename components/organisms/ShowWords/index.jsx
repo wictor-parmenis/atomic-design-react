@@ -1,3 +1,4 @@
+import factoryLabel from '../../../utils/factoryLabel'
 import Text from '../../atoms/Text'
 import { useSearch } from '../../../context/useSearch'
 import { Container } from './styles'
@@ -11,7 +12,7 @@ function ShowWords() {
 
     // Cérebro
     const [placeholderInput, setPlaceholderInput] = useState('Insert Words')
-    const [textOutdoor, setTextOutdoor] = useState()
+    const [textOutdoor, setTextOutdoor] = useState(['', ''])
     const {word, setWords} = useSearch()
     
     const getWord = (value) => {
@@ -21,17 +22,22 @@ function ShowWords() {
 
     const searchWord = () => {
         // query: https://dictionaryapi.dev/
-        console.log('entrei')
-        axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`)
+        try {
+            axios.get(`https://api.dictionaryapi.dev/api/v2/entries/pt-BR/${word}`)
             .then(res => {
                 setTextOutdoor(res.data[0].meanings[0].definitions[0].definition)
             })
+        }catch (error) {
+            console.log(error)
+            setTextOutdoor('Word not finded... Sorry, try other.')
+        }
+        
     }
 
     return (
         <Container>
             <Text color={'#f0ad4e'} font={'1.6em'}>Search any world in english here and see your meaning in Outdoor  :D</Text>
-            <Outdoor bg={"#efefef"}  color={"black"}>{textOutdoor}</Outdoor>
+            <Outdoor bg={"#efefef"}  color={"black"}>{(textOutdoor)}</Outdoor>
             <hr></hr>
             <InputLabel label={'Search for new words'} actionMol={getWord} bg={"#efefef"}  color={"black"} placeholder={placeholderInput}/>
             <div className='btn'> 
